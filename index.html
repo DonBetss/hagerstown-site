@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hagerstown Wiffle Ball League - Register for Summer Fun</title>
+  <meta name="description" content="Sign up for the Hagerstown Wiffle Ball League. Open to all ages. Register online and pay via CashApp or in person." />
+  <meta name="keywords" content="Hagerstown, Wiffle Ball, Youth Sports, Summer League, Maryland, Baseball, Sign Up, Family Fun" />
+  <meta property="og:title" content="Hagerstown Wiffle Ball League Registration" />
+  <meta property="og:description" content="Join the league and play Wiffle Ball this summer at the Fairgrounds in Hagerstown!" />
+  <meta property="og:image" content="poster_with_qr.png" />
+  <meta property="og:url" content="https://example.com/index.html" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Hagerstown Wiffle Ball League",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Hagerstown Fairgrounds",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hagerstown",
+        "addressRegion": "MD"
+      }
+    },
+    "startDate": "2025-06-01"
+  }
+  </script>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(to bottom right, #0040ff, #00ccff); color: #ffff33; padding: 20px; }
+    h1, h2 { text-align: center; }
+    .form-section { background: white; color: black; max-width: 600px; margin: 30px auto; padding: 20px; border-radius: 8px; }
+    label { display: block; margin-top: 15px; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+    .submit-btn { margin-top: 20px; background: #0040ff; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; }
+    .cashapp-section, .note { text-align: center; margin-top: 40px; }
+    a { color: #ffff33; text-align: center; display: block; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Hagerstown Wiffle Ball League Sign-Up</h1>
+  <h2>Fairgrounds - Hagerstown, Maryland</h2>
+
+  <div class="form-section">
+    <form action="https://formsubmit.co/hwblmail@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="thankyou.html" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <label>Are you 14 or older?</label>
+      <select name="age_check" required onchange="toggleGuardian(this.value)">
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="guardian-section" style="display:none;">
+        <label>Parent/Guardian Full Name:</label>
+        <input type="text" name="guardian_name" />
+        <label>Parent/Guardian Email:</label>
+        <input type="email" name="guardian_email" />
+        <label>Parent/Guardian Phone:</label>
+        <input type="tel" name="guardian_phone" />
+      </div>
+
+      <label>Player's Full Name:</label>
+      <input type="text" name="player_name" required />
+      <label>Age:</label>
+      <input type="number" name="player_age" required min="5" max="99" />
+      <label>Email (if player has one):</label>
+      <input type="email" name="player_email" />
+      <label>Shirt Size:</label>
+      <select name="shirt_size" required>
+        <option value="">Select</option>
+        <option value="YS">Youth Small</option>
+        <option value="YM">Youth Medium</option>
+        <option value="YL">Youth Large</option>
+        <option value="S">Adult Small</option>
+        <option value="M">Adult Medium</option>
+        <option value="L">Adult Large</option>
+        <option value="XL">Adult XL</option>
+        <option value="XXL">Adult XXL</option>
+      </select>
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+      <button class="submit-btn" type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <div class="cashapp-section">
+    <h3>Registration Fee: $15</h3>
+    <p>You can pay your $15 registration fee via CashApp or in cash at the Fairgrounds.</p>
+    <p>Send your payment to: <strong>$WiffleBallLeague</strong></p>
+  </div>
+
+  <div class="note">
+    <a href="about.html">About the League</a>
+  </div>
+
+  <script>
+    function toggleGuardian(value) {
+      const section = document.getElementById('guardian-section');
+      section.style.display = value === 'no' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
