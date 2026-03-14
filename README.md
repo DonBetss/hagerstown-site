@@ -1,6 +1,6 @@
-# hagerstown-site
+# hagerstownwiffleball-site
 
-This was a small website project I made about a year ago for a local Hagerstown Wiffle Ball League idea.
+This was a small website project I made about a year ago for a local Hagerstown Wiffle Ball League idea from third parties
 
 The purpose of the site was simple:
 - collect registration information
